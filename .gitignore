@@ -88,19 +88,15 @@ outs/
 logs/
 
 # Large image files (keeping sample images for demo)
-# *.jpg
-# *.png
-# *.jpeg
-# *.gif
-# *.bmp
-# *.tiff
+*.jpg
+*.png
+*.jpeg
+*.gif
+*.bmp
+*.tiff
 
 # Model checkpoints and data
 checkpoints/
 data/
 *.ckpt
 *.model
-
-# But keep the sample X-ray images for demonstration
-!Chest_Xray_*.jpg
-!Chest_Xray_*.png
