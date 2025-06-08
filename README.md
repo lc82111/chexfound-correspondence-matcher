@@ -18,9 +18,30 @@ cd xchexfound
 ```
 
 2. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
+
+3. Download pretrained weights and configuration files:
+   - Download the required files from: <https://drive.google.com/drive/folders/1GX2BWbujuVABtVpSZ4PTBykGULzrw806>
+   - Create the following directory structure in your project:
+
+   ```text
+   /mnt/data/checkpoints/chexfound/
+   ├── config.yaml
+   └── teacher_checkpoint.pth
+   ```
+
+   - Place the downloaded `config.yaml` and `teacher_checkpoint.pth` files in the above directory
+   - Alternatively, you can specify custom paths when initializing the `CheXFoundMatcher`:
+
+   ```python
+   matcher = CheXFoundMatcher(
+       config_file="path/to/your/config.yaml",
+       pretrained_weights="path/to/your/teacher_checkpoint.pth"
+   )
+   ```
 
 ## Usage
 
